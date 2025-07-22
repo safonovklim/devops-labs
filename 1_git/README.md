@@ -1,4 +1,4 @@
-# Lab 1: Work with Git (DevOps Fundamentals)
+# Lab 1: Work with Git
 
 In this lab, you will learn how to collaborate with team using Git and Github.
 
@@ -19,6 +19,18 @@ In this lab, you will learn how to collaborate with team using Git and Github.
 
 ## Task
 
-1. Clone repository [safonovklim/labs](https://github.com/safonovklim/labs) - `git@github.com:safonovklim/labs.git`
-2. Copy folder `./labs/devops-fundamentals` to `./my-labs` (`cp -R ./labs ./my-labs`)
-3. Run `cd ./my-labs`
+1. Clone repository [safonovklim/labs](https://github.com/safonovklim/devops-labs) - `git@github.com:safonovklim/devops-labs.git`
+2. Run `cd ./devops-labs`
+3. Remove any git information - `rm -rf .git`
+4. Create new github repository in your profile - https://github.com/new
+5. Run `git init`
+6. Run `git add .`
+7. Run `git commit -m "first commit"`
+8. Follow instructions from Github in block `…or push an existing repository from the command line`. Example
+
+
+```
+git remote add origin git@github.com:YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPO.git
+git branch -M main
+git push -u origin main
+```
