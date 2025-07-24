@@ -1,0 +1,99 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "readEc2",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Get*",
+                "ec2:Describe*",
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:TerminateInstances",
+                "ec2:RebootInstances",
+                "ec2:*Tags"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "launchEc2",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:RunInstances"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "ec2:InstanceType": "t2.micro"
+                }
+            }
+        },
+        {
+            "Sid": "s3",
+            "Effect": "Allow",
+            "Action": [
+                "s3:List*",
+                "s3:Describe*",
+                "s3:Get*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::devops-lab-public",
+                "arn:aws:s3:::devops-lab-public/*",
+                "arn:aws:s3:::devops-lab-private",
+                "arn:aws:s3:::devops-lab-private/*"
+            ]
+        },
+        {
+            "Sid": "iamRead",
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListInstanceProfiles",
+                "iam:ListRoles",
+                "iam:ListUsers",
+                "iam:ListUserPolicies",
+                "iam:ListUserTags",
+                "iam:ListRoleTags",
+                "iam:ListRolePolicies",
+                "iam:ListPolicyVersions",
+                "iam:ListPolicyTags",
+                "iam:ListPoliciesGrantingServiceAccess",
+                "iam:ListPolicies",
+                "iam:ListInstanceProfilesForRole",
+                "iam:ListInstanceProfileTags",
+                "iam:ListGroups",
+                "iam:ListGroupsForUser",
+                "iam:ListGroupPolicies",
+                "iam:ListEntitiesForPolicy",
+                "iam:ListAttachedRolePolicies",
+                "iam:ListAttachedUserPolicies",
+                "iam:ListAttachedGroupPolicies",
+                "iam:ListAccountAliases",
+                "iam:GetPolicy",
+                "iam:GetRole",
+                "iam:GetPolicyVersion",
+                "iam:GetRolePolicy",
+                "iam:GetUser",
+                "iam:GetUserPolicy",
+                "iam:GetMFADevice",
+                "iam:GetInstanceProfile",
+                "iam:GetGroupPolicy",
+                "iam:GetGroup",
+                "iam:GetAccountName"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "iamPass",
+            "Effect": "Allow",
+            "Action": [
+                "iam:PassRole"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:instance-profile/AmazonSSMManagedInstanceCore",
+                "arn:aws:iam::*:role/AmazonSSMManagedInstanceCore"
+            ]
+        }
+    ]
+}
