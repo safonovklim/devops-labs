@@ -13,13 +13,23 @@ In this lab, you will learn how to:
 
 1. Login to AWS Console using url, username and password with provided credentials
 2. Verify region switched to us-east-1 N. Virginia (top-right dropdown)
+
+![region](./images/1.png)
+
 3. Search for "EC2" in top-left search bar
+
+![search bar EC2](./images/2.png)
+
+
 4. Open [EC2 Service](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Home:)
-5. Click "Launch instance" (orange button button)
+5. Click "Launch instance" (orange button)
 6. Enter name "devops-lab-machine<your number>". (Example: `devops-lab-machine10`)
 7. Keep "Application and OS Images (Amazon Machine Image)" settings to defaults
 8. Change "Instance Type" to `t2.micro` (other types won't work)
 9. Change "Key Pair" to `Proceed without keypair (Not recommended)`
+
+![instance type and key pair](./images/3.png)
+
 10. Change "Network settings" to the following:
 
 - Network: "vpc-09f8ee1736d51cbf3 | devops-lab-vpc"
@@ -27,9 +37,14 @@ In this lab, you will learn how to:
 - Auto-assign public IP: Disabled
 - Firewall (security groups): `Select security group` -> `devops-lab-security-group`
 
+![instance type and key pair](./images/4.png)
+
 11. Keep "Configure storage" settings to defaults
 12. Expand "Advanced Settings"
 13. Set "IAM instance profile" to `AmazonSSMManagedInstanceCore`
+
+![instance profile selected](./images/5.png)
+
 14. Click "Launch instance" (right side-bar)
 15. Confirm that you can see the following message:
 
@@ -38,8 +53,9 @@ Success
 Successfully initiated launch of instance (i-0xxxxxxxxx)
 ```
 
-
 [!!!] Save EC2 instance ID somewhere (looks like this: `i-0xxxxxxxxx`)
+
+![instance profile selected](./images/6.png)
 
 ## Task - Part 2 (Connect to EC2 machine)
 
@@ -47,8 +63,14 @@ Successfully initiated launch of instance (i-0xxxxxxxxx)
 17. Wait until EC2 is online (status: Running)
 18. Click on "Connect"
 19. Open "Session Manager" tab
-20. Click "Connect" on the bottom-right
-21. Once session is opened, try couple of basic commands:
+
+[!!!] If page says "Instance is not connected to Session Manager", reload page in 1-2 minutes
+
+20. Click "Connect" (orange button) on the bottom-right
+
+![instance profile selected](./images/7.png)
+
+21. Once session is opened, try a couple of basic commands:
 
 - `pwd` -> get current folder
 - `whoami` -> get current username
@@ -73,6 +95,8 @@ Successfully initiated launch of instance (i-0xxxxxxxxx)
 [!!!] Save EC2 instance ID somewhere (looks like this: `i-0xxxxxxxxx`)
 
 
+![instance created](./images/8.png)
+
 ## Task - Part 3 (Setup your local environment with AWS CLI)
 
 
@@ -87,11 +111,17 @@ Instruction: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 27. Open tab "Security Credentials"
 28. Scroll down to "Access keys"
 29. Click on "Create access key"
+
+![create access key](./images/9.png)
+
 30. Choose "Command Line Interface (CLI)"
 31. Toggle checkbox "I understand the above recommendation and want to proceed to create an access key."
-32. Set any description or skip
-33. Confirm that key successfuly created
+32. Keep description empty, continue
+33. Confirm that key successfully created
 34. Click "Download .csv file"
+
+![save access key](./images/10.png)
+
 35. Open CSV file with your credentials
 36. Open Terminal
 37. Run command `aws sts get-caller-identity`  -> verify that some error returned (NotFound or ExpiredToken). No identity returned
@@ -135,3 +165,6 @@ Instruction: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 }
 ```
 
+## Task - Part 4 (Upload files to S3 bucket)
+
+TODO
