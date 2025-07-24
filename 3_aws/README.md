@@ -168,3 +168,22 @@ Instruction: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 ## Task - Part 4 (Upload files to S3 bucket)
 
 TODO
+
+44. Open your current folder using `open .` command
+45. Copy your own HTML file from Lab 1 (or create text file with any content like "Hello world") to opened folder
+46. Now upload this file to S3 bucket:
+
+```
+> aws s3 cp bcvry9.txt s3://devops-lab-private/
+upload: ./bcvry9.txt to s3://devops-lab-private/bcvry9.txt      
+```
+
+47. Verify that object is now uplaoded:
+
+- Open [devops-lab-private S3 bucket](https://us-east-1.console.aws.amazon.com/s3/buckets/devops-lab-private?region=us-east-1&bucketType=general&tab=objects)
+
+48. Click "Open" on your objects. Make sure content is visible in your browser.
+49. Delete file from S3 bucket using UI or cli (bonus point for finding delete command!)
+
+
+Done!
