@@ -65,3 +65,35 @@ git push —set-upstream origin your-branch-name
 
 
 Done ✅
+
+## Bonus task - Create profile-facing repository (business card)
+
+21. Create repository with name matching your profile username.
+
+For example, if your Github Username is `safonovklim`, then repository name should be `safonovklim`
+Example repository: https://github.com/safonovklim/safonovklim
+
+22. Create `README.md` file
+
+23. Using markdown, add information about yourself. Example:
+
+```markdown
+
+John Appleseed
+
+## Who am I
+
+- Software Engineer
+- DevOps Enthusiast
+- MIT Graduate
+- Cat Lover
+
+## My links
+
+- LinkedIn: ....
+```
+
+PS: Avoid putting contact information like phone number or email for privacy reasons
+
+24. Commit and push
+25. Open your github page and find pinned information

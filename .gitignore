@@ -1,3 +1,9 @@
 .DS_Store
 .idea
 iam_users.csv
+.terraform
+*.tf
+*.tfstate
+*.tfstate.backup
+*.json
+.terraform.lock.hcl
