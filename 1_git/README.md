@@ -21,7 +21,7 @@ In this lab, you will learn how to collaborate with team using Git and Github.
 
 ### part 1 - cloning
 
-1. Clone repository [safonovklim/labs](https://github.com/safonovklim/devops-labs) - `git@github.com:safonovklim/devops-labs.git`
+1. Clone repository [safonovklim/devops-labs](https://github.com/safonovklim/devops-labs) - `git@github.com:safonovklim/devops-labs.git`
 2. Run `cd ./devops-labs`
 3. Remove any git information - `rm -rf .git`
 4. Create new github repository in your profile - https://github.com/new
