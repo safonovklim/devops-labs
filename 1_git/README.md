@@ -45,6 +45,7 @@ git push -u origin main
 12. Save file changes
 
 ```
+git checkout -b your-branch-name
 git add “<your-name>.html”
 git commit -m ‘feat: added <your-name>.html”
 git push —set-upstream origin your-branch-name
