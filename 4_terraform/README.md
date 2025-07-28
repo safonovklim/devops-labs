@@ -127,4 +127,11 @@ file_console_link = "https://..."
 ```
 
 25. Open the link and download file to inspect
-26. Restart terraform apply, make sure no changes expected/made 
+26. Restart terraform apply, make sure no changes expected/made
+
+## Bonus task - Add random_pet resource and retry part 2
+
+27. Read documentation for resource `random_pet` resource - https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet
+28. Add random_pet resource to the main.tf file
+29. Add random_pet.<identifier>.id to JSON content of aws_s3_object
+30. Re-run terraform apply and verify pet inside the uploaded object
