@@ -93,7 +93,7 @@ resource "aws_s3_object" "main" {
 }
 
 output "file_console_link" {
-  value = "https://${data.aws_region.current.name}.console.aws.amazon.com/s3/object/${data.aws_s3_bucket.main.id}?region=${data.aws_region.current.name}&bucketType=general&prefix{aws_s3_object.main.key}"
+  value = "https://${data.aws_region.current.name}.console.aws.amazon.com/s3/object/${data.aws_s3_bucket.main.id}?region=${data.aws_region.current.name}&bucketType=general&prefix=${aws_s3_object.main.key}"
   description = "Link to the file in console"
 }
 ```
