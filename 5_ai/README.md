@@ -18,7 +18,7 @@ In this lab, you will learn how to run LLM models locally using Ollama
 1. Explore available models - https://ollama.com/search
 2. Run `ollama pull qwen2.5:0.5b` - smallest model (398Mb), feel free to choose any other model
 3. Disconnect device from internet
-4. Run `ollama pull qwen2.5:0.5b`
+4. Run `ollama run qwen2.5:0.5b`
 5. Ask LLM couple of questions of your choice. Example
 
 - Ask “What is DevOps?”
